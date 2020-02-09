@@ -1,4 +1,5 @@
 import 'package:alcoolougasolina/widgets/input.widget.dart';
+import 'package:alcoolougasolina/widgets/loading-button.widget.dart';
 import 'package:alcoolougasolina/widgets/logo.widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
@@ -54,25 +55,11 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  margin: EdgeInsets.all(30),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor,
-                    borderRadius: BorderRadius.circular(60),
-                  ),
-                  child: FlatButton(
-                    child: Text(
-                      "Calcular Novamente",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontFamily: "Big Shoulders Display"
-                      ),
-                    ),
-                    onPressed: () {} ,
-                  )
+                LoadingButton(
+                  busy: false,
+                  invert: true,
+                  func: () {},
+                  text: 'CALCULAR NOVAMENTE'
                 ),
               ],
             ),
@@ -85,27 +72,12 @@ class HomePage extends StatelessWidget {
             controller: _alcoolCtrl,
             label: "Álcool",
           ),
-          Container(
-            height: 60,
-            margin: EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              borderRadius: BorderRadius.circular(
-                60,
-              )
-            ),
-            child: FlatButton(
-              child: Text(
-                "Calcular",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 25,
-                  fontFamily: "Big Shoulders Display"
-                ),
-              ),
-              onPressed: () {},
-            ),
-          )
+          LoadingButton(
+            busy: false,
+            invert: false,
+            func: () {},
+            text: 'CALCULAR'
+          ),
         ],
       ),
     );
