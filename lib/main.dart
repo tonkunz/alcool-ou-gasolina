@@ -31,6 +31,52 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           Logo(),
+          Container(
+            margin: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 50,
+                ),
+                Text(
+                  "Compensa utilizar álcool",
+                  style: TextStyle(
+                    color: Theme.of(context).primaryColor,
+                    fontSize: 40,
+                    fontFamily: "Big Shoulders Display",
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  height: 60,
+                  width: double.infinity,
+                  margin: EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.circular(60),
+                  ),
+                  child: FlatButton(
+                    child: Text(
+                      "Calcular Novamente",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontFamily: "Big Shoulders Display"
+                      ),
+                    ),
+                    onPressed: () {} ,
+                  )
+                ),
+              ],
+            ),
+          ),
           Input(
             controller: _gasCtrl,
             label: "Gasolina",
@@ -39,6 +85,27 @@ class HomePage extends StatelessWidget {
             controller: _alcoolCtrl,
             label: "Álcool",
           ),
+          Container(
+            height: 60,
+            margin: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(
+                60,
+              )
+            ),
+            child: FlatButton(
+              child: Text(
+                "Calcular",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 25,
+                  fontFamily: "Big Shoulders Display"
+                ),
+              ),
+              onPressed: () {},
+            ),
+          )
         ],
       ),
     );
