@@ -40,10 +40,11 @@ class SubmitForm extends StatelessWidget {
             controller: alcCtrl
           ),
         ),
+        SizedBox(height: 25,),
         LoadingButton(
-          busy: false,
+          busy: busy,
           invert: false,
-          func: () {},
+          func: submitFunc,
           text: 'CALCULAR'
         ),
       ],
