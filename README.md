@@ -1,16 +1,14 @@
-# alcoolougasolina
+# Alcool ou Gasolina App
 
-A new Flutter project.
+Um mini app em Flutter criado no mini-curso rápido do portal [Balta.io](https://balta.io/cursos/flutter-apps-alcool-ou-gasolina)
 
-## Getting Started
+## Testando o projeto
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Para testar, certifique-se de ter instalado o Flutter em sua máquina seguindo os passos [aqui](https://flutter.dev/docs/get-started/install).
+ - Após isto, clone o projeto com:
+ ```git clone https://github.com/tonkunz/alcoolougasolina.git```
+ - Entre na pasta do projeto:
+ ```cd alcoolougasolina```
+ - Certifique-se de possuir um dispositivo disponível para rodar a aplicação:
+ ```flutter devices``` ou ```flutter emulators```
+ - Inicie o app com: ```flutter run```
